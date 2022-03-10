@@ -25,13 +25,13 @@ const features = [
     icon: LockClosedIcon,
   },
   {
-    name: "Application / website hosting",
+    name: "Application / API hosting",
     description:
       "User experience has changed dramatically in recent times. With the progress of technology, the once simple mediums of websites and apps transformed from very simple one-way streets, into rich and interactive experiences. Today the art of UX is more about how we make the user feel when using your product, and the simplicity of its use.",
     icon: RefreshIcon,
   },
   {
-    name: "Powerful API",
+    name: "API",
     description:
       "User experience has changed dramatically in recent times. With the progress of technology, the once simple mediums of websites and apps transformed from very simple one-way streets, into rich and interactive experiences. Today the art of UX is more about how we make the user feel when using your product, and the simplicity of its use.",
     icon: CogIcon,
@@ -40,16 +40,9 @@ const features = [
 
 export default function Feature() {
   return (
-    <div className="relative  py-16 sm:py-24 lg:py-32">
+    <div className="relative py-12 sm:py-12 lg:py-12">
       <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl">
-        <p className="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">
-          Services we offer
-        </p>
-        <p className="mx-auto mt-5 max-w-prose text-xl text-gray-500">
-          We are a small company with a big vision and futuristic plans for our
-          growths and excelent service
-        </p>
-        <div className="mt-12">
+        <div className="pb-24">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature) => (
               <div key={feature.name} className="pt-6">
