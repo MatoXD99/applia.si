@@ -1,15 +1,15 @@
 import React from "react";
 
-const Heading = () => {
+const Heading = (props) => {
   return (
-    <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
-      <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-        Our Team
-      </h2>
-      <p className="text-xl text-gray-500">
-        Odio nisi, lectus dis nulla. Ultrices maecenas vitae rutrum dolor
-        ultricies donec risus sodales. Tempus quis et.
-      </p>
+    <div class="bg-white">
+      <div class="bg-gray-100 rounded-lg max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-base font-semibold text-indigo-600 tracking-wide uppercase">{props.title}</h2>
+          <p class="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">{props.subtitle}</p>
+          <p class="max-w-xl mt-5 mx-auto text-xl text-gray-500">Start building for free, then add a site plan to go live. Account plans unlock additional features.</p>
+        </div>
+      </div>
     </div>
   );
 };

@@ -65,7 +65,6 @@ export default function Programms() {
   return (
     <div className="relative py-12 sm:py-22 lg:py-12">
       <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl">
-        <Heading />
         <div className="mb-12">
           <div className="rounded-lg bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px">
             {actions.map((action, actionIdx) => (

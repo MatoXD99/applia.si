@@ -1,4 +1,3 @@
-import Header from "./Header.js";
 import { MailIcon } from "@heroicons/react/solid";
 
 const navigation = [
@@ -12,11 +11,9 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Hero() {
+export default function Hero(props) {
   return (
     <div className="bg-white">
-      <Header />
-
       <main>
         <div>
           {/* Hero card */}
@@ -34,15 +31,13 @@ export default function Hero() {
                 </div>
                 <div className="relative text-center px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                   <h1 className="text-4xl font-extrabold sm:text-5xl lg:text-6xl">
-                    <span className="block text-white">We are a team</span>
+                    <span className="block text-white">{props.title}</span>
                   </h1>
                   <p className="mt-6 mx-auto max-w-lg text-xl text-white sm:max-w-3xl">
-                    We are a small company developing small or mid sized mobile
-                    and web applications. Mobile apps are developed for Android
-                    and as well for iOS
+                    {props.subtitle}
                   </p>
                   <button
-                    href="/contact"
+                    href="#"
                     type="button"
                     className="inline-flex mt-8 items-center px-6 py-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                   >

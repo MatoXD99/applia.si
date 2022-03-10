@@ -3,10 +3,10 @@ import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 const navigation = [
-  { name: "Who are we", href: "/" },
-  { name: "What we offer", href: "/whatweoffer" },
+  { name: "What we offer", href: "/" },
+  { name: "Who are we", href: "/whoarewe" },
   { name: "What we use", href: "/whatweuse" },
-  { name: "Contact", href: "/contact" },
+  { name: "Contact", href: "#" },
 ];
 
 function classNames(...classes) {
