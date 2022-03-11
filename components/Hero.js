@@ -1,5 +1,3 @@
-import { MailIcon } from "@heroicons/react/solid";
-
 const navigation = [
   { name: "who are we", href: "/whoarewe" },
   { name: "what we offer", href: "/whatweoffer" },

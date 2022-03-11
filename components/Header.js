@@ -1,7 +1,6 @@
 import { Fragment, useState } from "react";
 import { Popover, Transition, Dialog } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import { CheckIcon } from '@heroicons/react/outline'
 import { Switch } from "@headlessui/react";
 import Link from 'next/link'
 

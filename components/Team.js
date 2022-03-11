@@ -1,5 +1,3 @@
-import Heading from "./Heading.js";
-
 const people = [
   {
     name: "Matic Pohovski",

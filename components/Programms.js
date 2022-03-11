@@ -1,54 +1,3 @@
-{/*
-const actions = [
-  {
-    title: "Node.js",
-    description:
-      "Node.js is mainly used to build APIs, it is powerfull with its multi-process working (ADD SOME TEXT HERE)",
-    href: "#",
-    icon: ClockIcon,
-    iconForeground: "text-teal-700",
-    iconBackground: "bg-teal-50",
-  },
-  {
-    title: "Flutter",
-    description:
-      "Flutter is an open source framework by Google for building beautiful, natively compiled, multi-platform applications from a single codebase.",
-    href: "#",
-    icon: BadgeCheckIcon,
-    iconForeground: "text-purple-700",
-    iconBackground: "bg-purple-50",
-  },
-  {
-    title: "ReactJS",
-    description:
-      "ReactJS is a free and open-source front-end JavaScript library for building user interfaces based on UI components",
-    href: "#",
-    icon: UsersIcon,
-    iconForeground: "text-sky-700",
-    iconBackground: "bg-sky-50",
-  },
-  {
-    title: "Figma",
-    description:
-      "Figma is a vector graphics editor and prototyping tool which is primarily web-based, with additional offline features enabled by desktop applications for macOS and Windows.",
-    href: "#",
-    icon: CashIcon,
-    iconForeground: "text-yellow-700",
-    iconBackground: "bg-yellow-50",
-  },
-  {
-    title: "MySQL",
-    description:
-      "MySQL is an open-source relational database management system.",
-    href: "#",
-    icon: ReceiptRefundIcon,
-    iconForeground: "text-rose-700",
-    iconBackground: "bg-rose-50",
-  },
-];
-*/}
-
-import Image from "next/image"
 import NextJSImg from '../public/images/next_js.png'
 import FlutterImg from '../public/images/Flutter.png'
 import NodeJSImg from '../public/images/NodeJS.svg'
@@ -58,24 +7,23 @@ export default function Example() {
     <div className="relative bg-white pt-16 pb-32 overflow-hidden">
       <div className="relative mt-24">
         <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
-          <div className="px-4 max-w-xl sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+          <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
             <div>
               <div className="mt-6">
                 <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
                   Next.JS
                 </h2>
                 <p className="mt-4 text-lg text-gray-500">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                 </p>
               </div>
             </div>
           </div>
           <div className="mt-12 sm:mt-16 lg:mt-0">
             <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-              <Image
-                layout='responsive'
-                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                src={NextJSImg}
+              <img
+                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                src='./images/next_js.png'
                 alt="Customer profile user interface"
               />
             </div>
@@ -98,10 +46,9 @@ export default function Example() {
           </div>
           <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
             <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-              <Image
-                layout='responsive'
+              <img
                 className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                src={FlutterImg}
+                src='./images/flutter.png'
                 alt="Customer profile user interface"
               />
             </div>
@@ -117,17 +64,16 @@ export default function Example() {
                   NodeJS
                 </h2>
                 <p className="mt-4 text-lg text-gray-500">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                 </p>
               </div>
             </div>
           </div>
           <div className="mt-12 sm:mt-16 lg:mt-0">
             <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-              <Image
-                layout='responsive'
-                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                src={NodeJSImg}
+              <img
+                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                src='./images/nodejs.svg'
                 alt="Customer profile user interface"
               />
             </div>
@@ -143,17 +89,16 @@ export default function Example() {
                   Figma
                 </h2>
                 <p className="mt-4 text-lg text-gray-500">
-                  Figma is used for prototyping applications, it's similar to known Adobe XD, but free.
+                  Figma is used for prototyping applications, it&apos;s similar to known Adobe XD, but free.
                 </p>
               </div>
             </div>
           </div>
           <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
             <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-              <Image
-                layout='responsive'
+              <img
                 className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                src={FlutterImg}
+                src='./images/flutter.png'
                 alt="Customer profile user interface"
               />
             </div>
@@ -176,10 +121,9 @@ export default function Example() {
           </div>
           <div className="mt-12 sm:mt-16 lg:mt-0">
             <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-              <Image
-                layout='responsive'
-                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                src={NextJSImg}
+              <img
+                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                src='./images/flutter.png'
                 alt="Customer profile user interface"
               />
             </div>
