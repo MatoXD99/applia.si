@@ -3,11 +3,10 @@ import React from "react";
 const Heading = (props) => {
   return (
     <div class="bg-white">
-      <div class="bg-gray-100 rounded-lg max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-        <div class="text-center">
-          <h2 class="text-base font-semibold text-indigo-600 tracking-wide uppercase">{props.title}</h2>
-          <p class="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">{props.subtitle}</p>
-          <p class="max-w-xl mt-5 mx-auto text-xl text-gray-500">Start building for free, then add a site plan to go live. Account plans unlock additional features.</p>
+      <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+        <div class="relative bg-black shadow-xl sm:rounded-2xl sm:overflow-hidden text-center">
+          <p class="mt-10 text-4xl font-extrabold text-gray-100 sm:text-5xl sm:tracking-tight lg:text-6xl">{props.title}</p>
+          <p class="max-w-xl mb-10 mt-5 mx-auto text-xl text-gray-400">{props.subtitle}</p>
         </div>
       </div>
     </div>

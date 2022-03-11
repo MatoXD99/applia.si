@@ -15,7 +15,6 @@ export default function Home() {
 
       <Header />
       <Hero title="What we can offer you?" subtitle="bla bla bla" />
-      <Heading title="This is sample heading ---- :)" subtitle="Odio nisi, lectus dis nulla. Ultrices maecenas vitae rutrum dolor ultricies donec risus sodales. Tempus quis et." />
       <Feature />
       <Footer />
     </>
