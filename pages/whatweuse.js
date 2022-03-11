@@ -14,7 +14,7 @@ const whatweuse = () => {
             </Head>
 
             <Header />
-            <Hero title="Who are we?" subtitle="bla bla bla" />
+            <Hero title="What we use?" subtitle="Applia is using up-to-date technology to ensure maximum performance and quick application delivery." />
             <Programms />
             <Footer />
         </>

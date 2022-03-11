@@ -1,14 +1,4 @@
-import Heading from "./Heading.js";
-
-import {
-  AcademicCapIcon,
-  BadgeCheckIcon,
-  CashIcon,
-  ClockIcon,
-  ReceiptRefundIcon,
-  UsersIcon,
-} from "@heroicons/react/outline";
-
+{/*
 const actions = [
   {
     title: "Node.js",
@@ -56,73 +46,146 @@ const actions = [
     iconBackground: "bg-rose-50",
   },
 ];
+*/}
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+import Image from "next/image"
+import NextJSImg from '../public/images/next_js.png'
+import FlutterImg from '../public/images/Flutter.png'
+import NodeJSImg from '../public/images/NodeJS.svg'
 
-export default function Programms() {
+export default function Example() {
   return (
-    <div className="relative py-12 sm:py-22 lg:py-12">
-      <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl">
-        <div className="mb-12">
-          <div className="rounded-lg bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px">
-            {actions.map((action, actionIdx) => (
-              <div
-                key={action.title}
-                className={classNames(
-                  actionIdx === 0
-                    ? "rounded-tl-lg rounded-tr-lg sm:rounded-tr-none"
-                    : "",
-                  actionIdx === 1 ? "sm:rounded-tr-lg" : "",
-                  actionIdx === actions.length - 2 ? "sm:rounded-bl-lg" : "",
-                  actionIdx === actions.length - 1
-                    ? "rounded-bl-lg rounded-br-lg sm:rounded-bl-none"
-                    : "",
-                  "relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500"
-                )}
-              >
-                <div>
-                  <span
-                    className={classNames(
-                      action.iconBackground,
-                      action.iconForeground,
-                      "rounded-lg inline-flex p-3 ring-4 ring-white"
-                    )}
-                  >
-                    <action.icon className="h-6 w-6" aria-hidden="true" />
-                  </span>
-                </div>
-                <div className="mt-8">
-                  <h3 className="text-lg font-medium">
-                    <a href={action.href} className="focus:outline-none">
-                      {/* Extend touch target to entire panel */}
-                      <span className="absolute inset-0" aria-hidden="true" />
-                      {action.title}
-                    </a>
-                  </h3>
-                  <p className="mt-2 text-sm text-gray-500">
-                    {action.description}
-                  </p>
-                </div>
-                <span
-                  className="pointer-events-none absolute top-6 right-6 text-gray-300 group-hover:text-gray-400"
-                  aria-hidden="true"
-                >
-                  <svg
-                    className="h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M20 4h1a1 1 0 00-1-1v1zm-1 12a1 1 0 102 0h-2zM8 3a1 1 0 000 2V3zM3.293 19.293a1 1 0 101.414 1.414l-1.414-1.414zM19 4v12h2V4h-2zm1-1H8v2h12V3zm-.707.293l-16 16 1.414 1.414 16-16-1.414-1.414z" />
-                  </svg>
-                </span>
+    <div className="relative bg-white pt-16 pb-32 overflow-hidden">
+      <div className="relative mt-24">
+        <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+          <div className="px-4 max-w-xl sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+            <div>
+              <div className="mt-6">
+                <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                  Next.JS
+                </h2>
+                <p className="mt-4 text-lg text-gray-500">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                </p>
               </div>
-            ))}
+            </div>
+          </div>
+          <div className="mt-12 sm:mt-16 lg:mt-0">
+            <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+              <Image
+                layout='responsive'
+                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                src={NextJSImg}
+                alt="Customer profile user interface"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="mt-24">
+        <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+          <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
+            <div>
+              <div className="mt-6">
+                <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                  Flutter
+                </h2>
+                <p className="mt-4 text-lg text-gray-500">
+                  Flutter is being developed by Google and its open-source, which makes it an amazing tool with an amazing community for developing. Its also amazing, because it offers export to Android, iOS with single code! .
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+            <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+              <Image
+                layout='responsive'
+                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                src={FlutterImg}
+                alt="Customer profile user interface"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="relative mt-24">
+        <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+          <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+            <div>
+              <div className="mt-6">
+                <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                  NodeJS
+                </h2>
+                <p className="mt-4 text-lg text-gray-500">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="mt-12 sm:mt-16 lg:mt-0">
+            <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+              <Image
+                layout='responsive'
+                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                src={NodeJSImg}
+                alt="Customer profile user interface"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="mt-24">
+        <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+          <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
+            <div>
+              <div className="mt-6">
+                <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                  Figma
+                </h2>
+                <p className="mt-4 text-lg text-gray-500">
+                  Figma is used for prototyping applications, it's similar to known Adobe XD, but free.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+            <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+              <Image
+                layout='responsive'
+                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                src={FlutterImg}
+                alt="Customer profile user interface"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="relative sm:mt-24">
+        <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+          <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+            <div>
+              <div className="mt-6">
+                <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                  MySQL
+                </h2>
+                <p className="mt-4 text-lg text-gray-500">
+                  MySQL is used to store data, such as user data or anything you can think of.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="mt-12 sm:mt-16 lg:mt-0">
+            <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+              <Image
+                layout='responsive'
+                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                src={NextJSImg}
+                alt="Customer profile user interface"
+              />
+            </div>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
 
       <Header />
-      <Hero title="What we can offer you?" subtitle="bla bla bla" />
+      <Hero title="What we can offer you?" subtitle="Among other things, we mainly develop mobile and web applications, let's take a look" />
       <Feature />
       <Footer />
     </>

@@ -2,12 +2,12 @@ import Heading from "./Heading.js";
 
 const people = [
   {
-    name: "Lindsay Walton",
-    role: "Front-end Developer",
+    name: "Matic Pohovski",
+    role: "Full-Stack Developer",
     imageUrl:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+      "https://media-exp1.licdn.com/dms/image/C5603AQEesxeycNnL7A/profile-displayphoto-shrink_800_800/0/1617127328944?e=1652313600&v=beta&t=kSPp3g9mxuETAamXdg8o7gT8lEfl4zoyctm4qXSPTc8",
     twitterUrl: "#",
-    linkedinUrl: "#",
+    linkedinUrl: "https://www.linkedin.com/in/maticpohovski/",
   },
 ];
 
@@ -17,16 +17,6 @@ export default function Example() {
       <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
         <div className="space-y-12">
           {/* HEADING SECTION */}
-          <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
-            <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-              Our Team
-            </h2>
-            <p className="text-xl text-gray-500">
-              Odio nisi, lectus dis nulla. Ultrices maecenas vitae rutrum dolor
-              ultricies donec risus sodales. Tempus quis et.
-            </p>
-          </div>
-
           <ul
             role="list"
             className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8"

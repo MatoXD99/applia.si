@@ -14,7 +14,7 @@ const whoarewe = () => {
             </Head>
 
             <Header />
-            <Hero title="Who are we?" subtitle="bla bla bla" />
+            <Hero title="Who are we?" subtitle="Our team is fairly small... For now! We are planning on expading our team as customers and orders will grow." />
             <Team />
             <Footer />
         </>
