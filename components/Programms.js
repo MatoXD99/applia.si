@@ -1,7 +1,3 @@
-import NextJSImg from '../public/images/next_js.png'
-import FlutterImg from '../public/images/Flutter.png'
-import NodeJSImg from '../public/images/NodeJS.svg'
-
 export default function Example() {
   return (
     <div className="relative bg-white pt-16 pb-32 overflow-hidden">
