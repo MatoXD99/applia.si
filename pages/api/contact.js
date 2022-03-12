@@ -7,6 +7,12 @@ export default function (req, res) {
     const SMTP_EMAIL = process.env.SMTP_EMAIL;
     const SMTP_PASSWORD = process.env.SMTP_PASSWORD;
 
+    console.log("Name: " + req.body.name)
+    console.log("Last name: " + req.body.lastName)
+    console.log("Email: " + req.body.email)
+    console.log("Phone: " + req.body.phone)
+    console.log("Message: " + req.body.message)
+
     const transporter = nodemailer.createTransport({
         host: "mail.applia.si",
         port: 465,
@@ -18,11 +24,12 @@ export default function (req, res) {
     })
 
     const mailData = {
-        from: 'contact@applia.si',
+        from: req.body.email,
         to: 'smtp.applia@applia.si',
-        subject: "Message title",
-        text: "Plaintext version of the message",
-        html: "<p>HTML version of the message</p>"
+        subject: "Website Contact",
+        text: req.body.message,
+        html:
+            `<div> Phone number: ${req.body.phone} </div><p> Users email: ${req.body.email} </p><p> Message: ${req.body.message} </p>`
     }
 
     transporter.sendMail(mailData, function (err, info) {
@@ -33,6 +40,4 @@ export default function (req, res) {
             console.log(info),
                 res.status(200)
     })
-
-
 }
