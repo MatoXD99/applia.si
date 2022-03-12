@@ -12,6 +12,44 @@ export default function Header() {
   const [open, setOpen] = useState(false)
   const [agreed, setAgreed] = useState(false);
 
+  const [name, setName] = useState('')
+  const [lastName, setLastName] = useState('')
+  const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
+  const [message, setMessage] = useState('')
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log('Sending')
+    let data = {
+      name,
+      lastName,
+      email,
+      phone,
+      message
+    }
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then((res) => {
+      console.log('Response received')
+      if (res.status === 200) {
+        console.log('Response succeeded!')
+        setSubmitted(true)
+        setName('')
+        setLastName('')
+        setEmail('')
+        setPhone('')
+        setMessage('')
+      }
+    })
+  }
+
   return (
     <header>
       <Transition.Root show={open} as={Fragment}>
@@ -131,8 +169,9 @@ export default function Header() {
                         <div className="mt-1">
                           <input
                             type="text"
-                            name="first-name"
-                            id="first-name"
+                            name="name"
+                            id="name"
+                            onChange={(e) => { setName(e.target.value) }}
                             placeholder="Jane"
                             autoComplete="given-name"
                             className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
@@ -141,7 +180,7 @@ export default function Header() {
                       </div>
                       <div>
                         <label
-                          htmlFor="last-name"
+                          htmlFor="lastName"
                           className="block text-sm font-medium text-gray-700"
                         >
                           Last name
@@ -149,8 +188,9 @@ export default function Header() {
                         <div className="mt-1">
                           <input
                             type="text"
-                            name="last-name"
-                            id="last-name"
+                            name="lastName"
+                            id="lastName"
+                            onChange={(e) => { setLastName(e.target.value) }}
                             placeholder="Doe"
                             autoComplete="family-name"
                             className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
@@ -169,6 +209,7 @@ export default function Header() {
                             id="email"
                             name="email"
                             type="email"
+                            onChange={(e) => { setEmail(e.target.value) }}
                             placeholder="jane@doe.com"
                             autoComplete="email"
                             className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
@@ -185,8 +226,9 @@ export default function Header() {
                         <div className="mt-1 relative rounded-md shadow-sm">
                           <input
                             type="text"
-                            name="phone-number"
-                            id="phone-number"
+                            name="phone"
+                            id="phone"
+                            onChange={(e) => { setPhone(e.target.value) }}
                             autoComplete="tel"
                             className="py-3 px-4 block w-full focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                             placeholder="+1 (555) 987-6543"
@@ -204,6 +246,7 @@ export default function Header() {
                           <textarea
                             id="message"
                             name="message"
+                            onChange={(e) => { setMessage(e.target.value) }}
                             rows={4}
                             placeholder="I would like to cooperate with you :)"
                             className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"
@@ -236,13 +279,8 @@ export default function Header() {
                             <p className="text-base text-gray-500">
                               By selecting this, you agree to the{" "}
                               <a href="#" className="font-medium text-gray-700 underline">
-                                Privacy Policy
-                              </a>{" "}
-                              and{" "}
-                              <a href="#" className="font-medium text-gray-700 underline">
-                                Cookie Policy
+                                Privacy Policy.
                               </a>
-                              .
                             </p>
                           </div>
                         </div>
@@ -250,6 +288,7 @@ export default function Header() {
                       <div className="sm:col-span-2">
                         <button
                           type="submit"
+                          onClick={(e) => { handleSubmit(e) }}
                           className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         >
                           Let&apos;s talk
