@@ -10,7 +10,7 @@ export default function Example() {
                   Next.JS
                 </h2>
                 <p className="mt-4 text-lg text-gray-500">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                  Next.js gives you the best developer experience with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more. No config needed.
                 </p>
               </div>
             </div>
@@ -60,7 +60,7 @@ export default function Example() {
                   NodeJS
                 </h2>
                 <p className="mt-4 text-lg text-gray-500">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                  NodeJS is just amazing! We use it for building APIs, in which logic is written for applications, for an example: Connecting to the database to check, if password for user's login is matching.
                 </p>
               </div>
             </div>
@@ -85,7 +85,7 @@ export default function Example() {
                   Figma
                 </h2>
                 <p className="mt-4 text-lg text-gray-500">
-                  Figma is used for prototyping applications, it&apos;s similar to known Adobe XD, but free.
+                  With Figma, everyone works towards a shared goal. This has enabled our product teams to ship new products faster and feel more confident in their decisions.
                 </p>
               </div>
             </div>
@@ -110,7 +110,7 @@ export default function Example() {
                   MySQL
                 </h2>
                 <p className="mt-4 text-lg text-gray-500">
-                  MySQL is used to store data, such as user data or anything you can think of.
+                  MySQL is used to store data, such as user data or anything you can think of. It gives you an option to store important information.
                 </p>
               </div>
             </div>

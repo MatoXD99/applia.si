@@ -1,7 +1,8 @@
-import { Fragment, useState } from "react";
-import { Popover, Transition, Dialog } from "@headlessui/react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import { Switch } from "@headlessui/react";
+import { Fragment, useState } from "react"
+import { Popover, Transition, Dialog } from "@headlessui/react"
+import { MenuIcon, XIcon } from "@heroicons/react/outline"
+import { Switch } from "@headlessui/react"
+import { CheckCircleIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
 
 function classNames(...classes) {
@@ -11,6 +12,7 @@ function classNames(...classes) {
 export default function Header() {
   const [open, setOpen] = useState(false)
   const [agreed, setAgreed] = useState(false);
+  const [showNotification, setShowNotification] = useState(false)
 
   const [name, setName] = useState('')
   const [lastName, setLastName] = useState('')
@@ -50,8 +52,55 @@ export default function Header() {
     })
   }
 
+  const closeNotificationAfterTime = (time) => {
+    setTimeout(() => { setShowNotification(false) }, time);
+  }
+
   return (
     <header>
+      {/* Notification popup*/}
+      <div aria-live="assertive" className="fixed inset-0 z-50 flex items-start px-4 py-6 pointer-events-none sm:p-6 sm:items-end">
+        <div className="w-full flex flex-col items-center space-y-4 sm:items-start">
+          {/* Notification panel, dynamically insert this into the live region when it needs to be displayed */}
+          <Transition
+            show={showNotification}
+            as={Fragment}
+            enter="transform ease-out duration-300 transition"
+            enterFrom="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
+            enterTo="translate-y-0 opacity-100 sm:translate-x-0"
+            leave="transition ease-in duration-100"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden">
+              <div className="p-4">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0">
+                    <CheckCircleIcon className="h-6 w-6 text-green-400" aria-hidden="true" />
+                  </div>
+                  <div className="ml-3 w-0 flex-1 pt-0.5">
+                    <p className="text-sm font-medium text-gray-900">Successfully sent!</p>
+                    <p className="mt-1 text-sm text-gray-500">We will contact you as soon as possible.</p>
+                  </div>
+                  <div className="ml-4 flex-shrink-0 flex">
+                    <button
+                      className="bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      onClick={() => {
+                        setShowNotification(false)
+                      }}
+                    >
+                      <span className="sr-only">Close</span>
+                      <XIcon className="h-5 w-5" aria-hidden="true" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Transition>
+        </div>
+      </div>
+
+      {/* Modal contact form */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="fixed z-10 inset-0 overflow-y-auto" onClose={setOpen}>
           <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
@@ -255,40 +304,9 @@ export default function Header() {
                         </div>
                       </div>
                       <div className="sm:col-span-2">
-                        <div className="flex items-start">
-                          <div className="flex-shrink-0">
-                            <Switch
-                              checked={agreed}
-                              onChange={setAgreed}
-                              className={classNames(
-                                agreed ? "bg-indigo-600" : "bg-gray-200",
-                                "relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                              )}
-                            >
-                              <span className="sr-only">Agree to policies</span>
-                              <span
-                                aria-hidden="true"
-                                className={classNames(
-                                  agreed ? "translate-x-5" : "translate-x-0",
-                                  "inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200"
-                                )}
-                              />
-                            </Switch>
-                          </div>
-                          <div className="ml-3">
-                            <p className="text-base text-gray-500">
-                              By selecting this, you agree to the{" "}
-                              <a href="#" className="font-medium text-gray-700 underline">
-                                Privacy Policy.
-                              </a>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="sm:col-span-2">
                         <button
                           type="submit"
-                          onClick={(e) => { handleSubmit(e) }}
+                          onClick={(e) => { handleSubmit(e); setOpen(false); setShowNotification(true); closeNotificationAfterTime(3000); }}
                           className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         >
                           Let&apos;s talk
@@ -302,6 +320,8 @@ export default function Header() {
           </div>
         </Dialog>
       </Transition.Root>
+
+      {/* Header menu */}
       <Popover className="relative bg-white">
         <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
           <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -357,6 +377,26 @@ export default function Header() {
                       <XIcon className="h-6 w-6" aria-hidden="true" />
                     </Popover.Button>
                   </div>
+                </div>
+                <div className="mt-6">
+                  <nav className="grid grid-cols-1 gap-7">
+                    <a href='/' className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                      {/*
+                      <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-600 text-white">
+                        <div className="h-6 w-6" aria-hidden="true" />
+                      </div>*/}
+                      <div className="text-base font-medium text-gray-900">What we offer</div>
+                    </a>
+                    <a href='/whoarewe' className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                      <div className="text-base font-medium text-gray-900">Who are we</div>
+                    </a>
+                    <a href='/whatweuse' className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                      <div className="text-base font-medium text-gray-900">What we use</div>
+                    </a>
+                    <button onClick={() => setOpen(true)} className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                      <div className="text-base font-medium text-gray-900">Contact</div>
+                    </button>
+                  </nav>
                 </div>
               </div>
             </div>
