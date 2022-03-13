@@ -60,7 +60,7 @@ export default function Example() {
                   NodeJS
                 </h2>
                 <p className="mt-4 text-lg text-gray-500">
-                  NodeJS is just amazing! We use it for building APIs, in which logic is written for applications, for an example: Connecting to the database to check, if password for user's login is matching.
+                  NodeJS is just amazing! We use it for building APIs, in which logic is written for applications, for an example: Connecting to the database to check, if password for user&apos;s login is matching.
                 </p>
               </div>
             </div>

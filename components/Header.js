@@ -325,14 +325,16 @@ export default function Header() {
       <Popover className="relative bg-white">
         <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a href="#">
-              <span className="sr-only">Workflow</span>
-              <img
-                className="h-8 w-auto sm:h-10"
-                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                alt=""
-              />
-            </a>
+            <Link href="#">
+              <>
+                <span className="sr-only">Workflow</span>
+                <img
+                  className="h-8 w-auto sm:h-10"
+                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                  alt=""
+                />
+              </>
+            </Link>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -380,19 +382,15 @@ export default function Header() {
                 </div>
                 <div className="mt-6">
                   <nav className="grid grid-cols-1 gap-7">
-                    <a href='/' className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
-                      {/*
-                      <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-600 text-white">
-                        <div className="h-6 w-6" aria-hidden="true" />
-                      </div>*/}
+                    <Link href='/' className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
                       <div className="text-base font-medium text-gray-900">What we offer</div>
-                    </a>
-                    <a href='/whoarewe' className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                    </Link>
+                    <Link href='/whoarewe' className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
                       <div className="text-base font-medium text-gray-900">Who are we</div>
-                    </a>
-                    <a href='/whatweuse' className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                    </Link>
+                    <Link href='/whatweuse' className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
                       <div className="text-base font-medium text-gray-900">What we use</div>
-                    </a>
+                    </Link>
                     <button onClick={() => setOpen(true)} className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
                       <div className="text-base font-medium text-gray-900">Contact</div>
                     </button>
