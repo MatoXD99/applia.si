@@ -52,9 +52,9 @@ export default function Feature() {
                       <feature.icon className="h-6 w-6 text-white" />
                     </span>
                   </div>
-                  <h3 className="mt-8 text-lg font-medium tracking-tight text-gray-900">
+                  <h1 className="mt-8 text-lg font-medium tracking-tight text-gray-900">
                     {feature.name}
-                  </h3>
+                  </h1>
                   <p className="mt-5 text-base text-gray-500">
                     {feature.description}
                   </p>

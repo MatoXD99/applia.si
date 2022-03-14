@@ -4,6 +4,10 @@ const nextConfig = {
   images: {
     domains: ['tailwindui.com', 'images.unsplash.com', 'media-exp1.licdn.com'],
   },
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+  },
 }
 
 module.exports = nextConfig

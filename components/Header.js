@@ -1,9 +1,10 @@
 import { Fragment, useState } from "react"
 import { Popover, Transition, Dialog } from "@headlessui/react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
-import { Switch } from "@headlessui/react"
 import { CheckCircleIcon } from '@heroicons/react/outline'
+import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -58,6 +59,11 @@ export default function Header() {
 
   return (
     <header>
+      <Head>
+        <title>Applia.si</title>
+        <meta name="keywords" content="programming, web, mobile, application, android, ios, mysql, reactjs, javascript" />
+        <meta name="description" content="Applia develops fast, beautiful web and mobile application." />
+      </Head>
       {/* Notification popup*/}
       <div aria-live="assertive" className="fixed inset-0 z-50 flex items-start px-4 py-6 pointer-events-none sm:p-6 sm:items-end">
         <div className="w-full flex flex-col items-center space-y-4 sm:items-start">
@@ -327,10 +333,12 @@ export default function Header() {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="#">
               <>
-                <span className="sr-only">Workflow</span>
-                <img
+                <span className="sr-only">Applia.si</span>
+                <Image
+                  width={40}
+                  height={40}
                   className="h-8 w-auto sm:h-10"
-                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                  src="/vercel.png"
                   alt=""
                 />
               </>
@@ -367,9 +375,11 @@ export default function Header() {
               <div className="pt-5 pb-6 px-5">
                 <div className="flex items-center justify-between">
                   <div>
-                    <img
+                    <Image
+                      width={40}
+                      height={40}
                       className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                      src="/vercel.png"
                       alt="Workflow"
                     />
                   </div>
