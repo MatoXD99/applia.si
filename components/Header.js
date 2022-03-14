@@ -4,7 +4,6 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline"
 import { CheckCircleIcon } from '@heroicons/react/outline'
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -334,9 +333,7 @@ export default function Header() {
             <Link href="#">
               <>
                 <span className="sr-only">Applia.si</span>
-                <Image
-                  width={40}
-                  height={40}
+                <img
                   className="h-8 w-auto sm:h-10"
                   src="/vercel.png"
                   alt=""
@@ -375,9 +372,7 @@ export default function Header() {
               <div className="pt-5 pb-6 px-5">
                 <div className="flex items-center justify-between">
                   <div>
-                    <Image
-                      width={40}
-                      height={40}
+                    <img
                       className="h-8 w-auto"
                       src="/vercel.png"
                       alt="Workflow"
