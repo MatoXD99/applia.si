@@ -11,56 +11,11 @@ const people = [
             'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
     },
     {
-        name: 'Matic Pohovski',
-        title: 'CEO of Applia',
-        role: 'CEO',
-        email: 'matic.pohovski@applia.si',
-        telephone: '+386 31 628 195',
-        imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-    },
-    {
-        name: 'Matic Pohovski',
-        title: 'CEO of Applia',
-        role: 'CEO',
-        email: 'matic.pohovski@applia.si',
-        telephone: '+386 31 628 195',
-        imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-    },
-    {
-        name: 'Matic Pohovski',
-        title: 'CEO of Applia',
-        role: 'CEO',
-        email: 'matic.pohovski@applia.si',
-        telephone: '+386 31 628 195',
-        imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-    },
-    {
-        name: 'Matic Pohovski',
-        title: 'CEO of Applia',
-        role: 'CEO',
-        email: 'matic.pohovski@applia.si',
-        telephone: '+386 31 628 195',
-        imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-    },
-    {
-        name: 'Matic Pohovski',
-        title: 'CEO of Applia',
-        role: 'CEO',
-        email: 'matic.pohovski@applia.si',
-        telephone: '+386 31 628 195',
-        imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-    },
-    {
-        name: 'Matic Pohovski',
-        title: 'CEO of Applia',
-        role: 'CEO',
-        email: 'matic.pohovski@applia.si',
-        telephone: '+386 31 628 195',
+        name: 'Ana Podhostnik',
+        title: 'Wife of CEO',
+        role: 'Wife of CEO',
+        email: 'ana.podhostnik@applia.si',
+        telephone: '+386 40 505 654',
         imageUrl:
             'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
     },
