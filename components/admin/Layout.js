@@ -1,6 +1,5 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import Link from 'next/link'
 import {
     CalendarIcon,
     ChartBarIcon,
@@ -11,10 +10,9 @@ import {
     UsersIcon,
     XIcon,
 } from '@heroicons/react/outline'
-import Preferences from '../../components/admin/Preferences'
 
 const navigation = [
-    { name: 'Dashboard', href: '/admin/dashboard', icon: HomeIcon, current: false },
+    { name: 'Dashboard', href: '/admin/', icon: HomeIcon, current: true },
     { name: 'Team', href: '/admin/team', icon: UsersIcon, current: false },
     { name: 'Projects', href: '/admin/projects', icon: FolderIcon, current: false },
     { name: 'Calendar', href: '/admin/calendar', icon: CalendarIcon, current: false },
@@ -25,7 +23,7 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Settings() {
+export default function Example({ children }) {
     const [sidebarOpen, setSidebarOpen] = useState(false)
 
     return (
@@ -105,7 +103,7 @@ export default function Settings() {
                                     </nav>
                                 </div>
                                 <div className="flex-shrink-0 flex bg-gray-700 p-4">
-                                    <Link href="/admin/settings" className="flex-shrink-0 group block">
+                                    <a href="#" className="flex-shrink-0 group block">
                                         <div className="flex items-center">
                                             <div>
                                                 <img
@@ -119,7 +117,7 @@ export default function Settings() {
                                                 <p className="text-sm font-medium text-gray-400 group-hover:text-gray-300">View profile</p>
                                             </div>
                                         </div>
-                                    </Link>
+                                    </a>
                                 </div>
                             </div>
                         </Transition.Child>
@@ -193,10 +191,13 @@ export default function Settings() {
                     </div>
                     <main className="flex-1">
                         <div className="py-6">
+                            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                                <h1 className="text-2xl font-semibold text-gray-900">Dashboard</h1>
+                            </div>
                             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-                                {/* Replace with your content */}
-                                <Preferences />
-                                {/* /End replace */}
+                                <div>
+                                    {children}
+                                </div>
                             </div>
                         </div>
                     </main>

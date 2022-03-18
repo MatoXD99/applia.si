@@ -1,8 +1,11 @@
 import React from 'react'
+import Layout from '../../components/admin/Layout'
 
 const documents = () => {
     return (
-        <div>documents</div>
+        <Layout>
+            Documents
+        </Layout>
     )
 }
 

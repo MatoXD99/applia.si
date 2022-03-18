@@ -203,10 +203,14 @@ export default function Header() {
                     />
                   </svg>
                   <div className="text-center">
-                    <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                       Send us a message
-                    </h2>
+                    </h1>
                   </div>
+                  <label htmlFor="first-name" className="block mt-2 text-sm font-medium text-gray-700 text-center"  >
+                    You can also call us: +386 31 628 195 <br />
+                    Or send us an email: info@applia.si
+                  </label>
                   <div className="mt-12">
                     <form
                       action="#"
@@ -302,7 +306,7 @@ export default function Header() {
                             name="message"
                             onChange={(e) => { setMessage(e.target.value) }}
                             rows={4}
-                            placeholder="I would like to cooperate with you :)"
+                            placeholder="We would like to cooperate with you :)"
                             className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"
                             defaultValue={""}
                           />

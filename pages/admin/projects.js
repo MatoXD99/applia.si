@@ -1,9 +1,12 @@
 import React from 'react'
+import Layout from '../../components/admin/Layout'
 
-const projects = () => {
+const Projects = () => {
     return (
-        <div>projects</div>
+        <Layout>
+            Projects
+        </Layout>
     )
 }
 
-export default projects
+export default Projects

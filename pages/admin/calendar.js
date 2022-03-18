@@ -1,9 +1,12 @@
 import React from 'react'
+import Layout from '../../components/admin/Layout'
 
-const calendar = () => {
+const Calendar = () => {
     return (
-        <div>calendar</div>
+        <Layout>
+            Calendar
+        </Layout>
     )
 }
 
-export default calendar
+export default Calendar
